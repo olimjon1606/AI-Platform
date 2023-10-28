@@ -40,9 +40,9 @@ const ConversationPage= () =>{
             role: "user",
             content: values.prompt,
           };
-        const newMessages = [...messages, userMessage];
+        const newMessages = [userMessage, ...messages];
         const response = await axios.post('/api/conversation', { messages: newMessages });
-        setMessages((current) => [...current, userMessage, response.data]);
+        setMessages((current) => [response.data,userMessage,...current]);
         form.reset();
         }catch(error: any){
           console.log(error);
