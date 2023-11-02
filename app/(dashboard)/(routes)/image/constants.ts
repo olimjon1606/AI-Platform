@@ -37,8 +37,8 @@ export const resolutionOptions = [
     label: "256x256",
   },
   {
-    value: "512v512",
-    label: "512v512",
+    value: "512x512",
+    label: "512x512",
   },
   {
     value: "1024x1024",
